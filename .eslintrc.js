@@ -7,7 +7,11 @@ module.exports = {
    * See packages/eslint-plugin/src/configs/README.md
    * for what this recommended config contains.
    */
-  extends: ['plugin:@angular-eslint/recommended'],
+  extends: [
+    'plugin:@angular-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
   rules: {
     // ORIGINAL tslint.json -> "directive-selector": [true, "attribute", "app", "camelCase"],
     '@angular-eslint/directive-selector': [
