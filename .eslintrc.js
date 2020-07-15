@@ -27,7 +27,12 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2020,
-    project: ['./tsconfig.app.json', './tsconfig.spec.json', './e2e/tsconfig.json'],
+    project: [
+      './tsconfig.app.json',
+      './tsconfig.spec.json',
+      './e2e/tsconfig.json',
+      './.storybook/tsconfig.json'
+    ],
     sourceType: "module",
   },
 };
