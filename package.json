@@ -58,6 +58,7 @@
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "lint-staged": "^10.2.11",
+    "modern-css-reset": "^1.1.0",
     "prettier": "2.0.5",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
