@@ -2,3 +2,49 @@
 // This file contains all application-wide Sass mixins.
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/abstracts/_mixins.scss
 // -----------------------------------------------------------------------------
+
+@use 'abstracts/variables' as v;
+
+// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+
+@mixin for-phone-only {
+  @media (max-width: v.$phone-upper-boundary - 1) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: v.$phone-upper-boundary) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: v.$tablet-portrait-upper-boundary) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: v.$tablet-landscape-upper-boundary) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: v.$desktop-upper-boundary) {
+    @content;
+  }
+}
+
+/* Usage
+
+.my-box {
+  padding: 10px;
+
+  @include for-desktop-up {
+    padding: 20px;
+  }
+}
+
+*/

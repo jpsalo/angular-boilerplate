@@ -2,3 +2,93 @@
 // This file contains CSS helper classes.
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_helpers.scss
 // -----------------------------------------------------------------------------
+
+// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+
+@use 'abstracts/mixins' as m;
+
+.for-phone-only {
+  display: inline-block;
+  @include m.for-tablet-portrait-up {
+    display: none;
+  }
+}
+
+.for-tablet-portrait-up {
+  display: none;
+  @include m.for-tablet-portrait-up {
+    display: inline-block;
+  }
+}
+
+.for-tablet-portrait-only {
+  display: none;
+  @include m.for-tablet-portrait-up {
+    display: inline-block;
+  }
+  @include m.for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.for-tablet-portrait-down {
+  display: inline-block;
+  @include m.for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.for-tablet-landscape-up {
+  display: none;
+  @include m.for-tablet-landscape-up {
+    display: inline-block;
+  }
+}
+
+.for-tablet-landscape-only {
+  display: none;
+  @include m.for-tablet-landscape-up {
+    display: inline-block;
+  }
+  @include m.for-desktop-up {
+    display: none;
+  }
+}
+
+.for-tablet-landscape-down {
+  display: inline-block;
+  @include m.for-desktop-up {
+    display: none;
+  }
+}
+
+.for-desktop-up {
+  display: none;
+  @include m.for-desktop-up {
+    display: inline-block;
+  }
+}
+
+.for-desktop-only {
+  display: none;
+  @include m.for-desktop-up {
+    display: inline-block;
+  }
+  @include m.for-big-desktop-up {
+    display: none;
+  }
+}
+
+.for-desktop-down {
+  display: inline-block;
+  @include m.for-big-desktop-up {
+    display: none;
+  }
+}
+
+.for-big-desktop-only {
+  display: none;
+  @include m.for-big-desktop-up {
+    display: inline-block;
+  }
+}
