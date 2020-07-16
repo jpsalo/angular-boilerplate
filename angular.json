@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/modern-css-reset/dist/reset.min.css",
-              "src/styles.scss"
+              "src/styles/main.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

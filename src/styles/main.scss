@@ -1,0 +1,12 @@
+// https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/main.scss
+
+@charset "UTF-8";
+
+// Configuration and helpers
+@import 'abstracts/functions', 'abstracts/mixins', 'abstracts/variables';
+
+// Base stuff
+@import 'base/base', 'base/fonts', 'base/helpers', 'base/reset', 'base/typography';
+
+// Layout-related sections
+@import 'layout/grid';
