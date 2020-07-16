@@ -4,14 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:storybook": "start-storybook -p 6006",
     "build": "ng build",
+    "build:storybook": "build-storybook",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "eslint-check": "eslint --print-config ./src/app/app.module.ts | eslint-config-prettier-check",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "lint:eslint-check": "eslint --print-config ./src/app/app.module.ts | eslint-config-prettier-check",
+    "lint:stylelint-check": "stylelint-config-prettier-check",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
