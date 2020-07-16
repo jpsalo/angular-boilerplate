@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "eslint-check": "eslint --print-config ./src/app/app.module.ts | eslint-config-prettier-check",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "private": true,
   "dependencies": {
