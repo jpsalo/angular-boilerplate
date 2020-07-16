@@ -3,10 +3,16 @@
 @charset "UTF-8";
 
 // Configuration and helpers
-@import 'abstracts/functions', 'abstracts/mixins', 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
 
 // Base stuff
-@import 'base/base', 'base/fonts', 'base/helpers', 'base/reset', 'base/typography';
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/reset';
+@use 'base/typography';
 
 // Layout-related sections
-@import 'layout/grid';
+@use 'layout/grid';
