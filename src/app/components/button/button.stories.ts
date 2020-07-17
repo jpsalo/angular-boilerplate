@@ -1,4 +1,4 @@
-import { ButtonComponent } from '../app/components/button/button.component';
+import { ButtonComponent } from './button.component';
 
 export default {
   title: 'Button',
@@ -8,4 +8,3 @@ export default {
 export const Text = () => ({
   component: ButtonComponent,
 });
-
