@@ -27,12 +27,12 @@ $space-inset-m: $space-m $space-m $space-m $space-m;
 $space-inset-l: $space-l $space-l $space-l $space-l;
 $space-inset-xl: $space-xl $space-xl $space-xl $space-xl;
 
-$space-squish-s: $space-xs $space-s $space-xs $space-s;
-$space-squish-m: $space-s $space-m $space-s $space-m;
-$space-squish-l: $space-m $space-l $space-m $space-l;
+$space-inset-squish-s: $space-xs $space-s $space-xs $space-s;
+$space-inset-squish-m: $space-s $space-m $space-s $space-m;
+$space-inset-squish-l: $space-m $space-l $space-m $space-l;
 
-$space-stretch-s: $space-s * 1.5 $space-s $space-s * 1.5 $space-s;
-$space-stretch-m: $space-m * 1.5 $space-m $space-m * 1.5 $space-m;
+$space-inset-stretch-s: $space-s * 1.5 $space-s $space-s * 1.5 $space-s;
+$space-inset-stretch-m: $space-m * 1.5 $space-m $space-m * 1.5 $space-m;
 
 $space-stack-default: 0 0 $space-default 0;
 $space-stack-xs: 0 0 $space-xs 0;
