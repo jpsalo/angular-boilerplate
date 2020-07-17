@@ -1,0 +1,9 @@
+<h2>Questions</h2>
+
+<ul>
+  <li *ngFor="let question of questions">
+    <a routerLink="/detail/{{ question.id }}">
+      <span>{{ question.id }}</span> {{ question.name }}
+    </a>
+  </li>
+</ul>
