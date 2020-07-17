@@ -1,0 +1,13 @@
+@use 'abstracts/mixins' as m;
+@use 'abstracts/variables' as v;
+
+.jenson {
+  background-color: #f00;
+  padding: v.$space-inset-squish-m;
+  @include m.for-tablet-portrait-up {
+    background-color: #008000;
+  }
+  @include m.for-tablet-landscape-up {
+    background-color: #000;
+  }
+}
