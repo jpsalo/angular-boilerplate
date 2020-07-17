@@ -1,0 +1,74 @@
+@use 'abstracts/variables' as v;
+
+.insets-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%inset {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.inset__square {
+  @extend %inset;
+  border: solid #f00;
+  height: 150px;
+  width: 150px;
+
+  &--xs {
+    border-width: v.$space-inset-xs;
+  }
+
+  &--s {
+    border-width: v.$space-inset-s;
+  }
+
+  &--xl {
+    border-width: v.$space-inset-xl;
+  }
+}
+
+.inset__squish {
+  @extend %inset;
+  border: solid #ffa500;
+  height: 60px;
+  width: 100px;
+
+  &--s {
+    border-width: v.$space-inset-squish-s;
+  }
+
+  &--l {
+    border-width: v.$space-inset-squish-l;
+  }
+}
+
+.inset__stretch {
+  @extend %inset;
+  border: solid #800080;
+  height: 60px;
+  width: 100px;
+
+  &--m {
+    border-width: v.$space-inset-stretch-m;
+  }
+}
+
+.stack {
+  background-color: #add8e6;
+  border: solid #00f;
+  &--xl {
+    border-width: v.$space-stack-xl;
+  }
+}
+
+.inline {
+  background-color: #90ee90;
+  border: solid #008000;
+  display: inline-block;
+  &--m {
+    border-width: 0 v.$space-inline-m 0 0;
+  }
+}
