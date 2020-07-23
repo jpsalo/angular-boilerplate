@@ -1,9 +1,6 @@
-<h1>{{ title }}</h1>
+<app-header title="{{ title }}"></app-header>
 
-<nav>
-  <a routerLink="/main">Main</a>
-  <a routerLink="/questions">Questions</a>
-</nav>
-
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<main class="main">
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</main>

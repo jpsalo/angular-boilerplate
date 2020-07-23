@@ -1,0 +1,9 @@
+@use 'abstracts/variables' as v;
+
+.header {
+  align-items: center;
+  background-color: v.$base05-light;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -3,6 +3,12 @@
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_base.scss
 // -----------------------------------------------------------------------------
 
+@use 'abstracts/variables' as v;
+
+body {
+  background-color: v.$base00-light;
+}
+
 button {
   border: 0;
 }

@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { SpacesComponent } from './spaces/spaces.component';
 import { MessagesComponent } from './messages/messages.component';
+import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
-  declarations: [ButtonComponent, SpacesComponent, MessagesComponent],
-  imports: [CommonModule],
-  exports: [ButtonComponent, SpacesComponent, MessagesComponent],
+  declarations: [ButtonComponent, SpacesComponent, MessagesComponent, HeaderComponent],
+  imports: [CommonModule, AppRoutingModule],
+  exports: [ButtonComponent, SpacesComponent, MessagesComponent, HeaderComponent],
 })
 export class ComponentsModule {}

@@ -1,0 +1,9 @@
+@use 'abstracts/variables' as v;
+
+.header {
+  height: v.$size-header;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
