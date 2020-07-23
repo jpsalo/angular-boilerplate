@@ -1,1 +1,2 @@
-<app-spaces></app-spaces>
+<app-hero></app-hero>
+<app-case *ngFor="let number of [0, 1, 2, 3]; even as isEven" type="{{ isEven ? 'even' : 'odd' }}"></app-case>

@@ -1,0 +1,10 @@
+@use 'abstracts/variables' as v;
+
+.case {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  &--even {
+    background-color: v.$base08-light;
+  }
+}

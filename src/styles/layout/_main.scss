@@ -1,5 +1,9 @@
 @use 'abstracts/variables' as v;
 
-.main {
-  margin-top: v.$size-header;
+.hero {
+  height: 70vh;
+}
+
+.case {
+  height: 100vh;
 }
