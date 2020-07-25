@@ -1,1 +1,11 @@
 // https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_typography.scss
+
+@use 'abstracts/variables' as v;
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: v.$text-color;
+  font: 100% v.$font-stack;
+}
