@@ -1,8 +1,7 @@
 @use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
 
 .hero {
-  align-items: center;
+  @include m.center;
   background-color: v.$base04-light;
-  display: flex;
-  justify-content: center;
 }

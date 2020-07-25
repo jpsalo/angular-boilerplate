@@ -1,9 +1,8 @@
 @use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
 
 .case {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include m.center;
   &--even {
     background-color: v.$base08-light;
   }
