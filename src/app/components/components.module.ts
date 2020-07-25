@@ -6,11 +6,11 @@ import { MessagesComponent } from './messages/messages.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { HeroComponent } from './hero/hero.component';
-import { CaseComponent } from './case/case.component';
+import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
-  declarations: [ButtonComponent, SpacesComponent, MessagesComponent, HeaderComponent, HeroComponent, CaseComponent],
+  declarations: [ButtonComponent, SpacesComponent, MessagesComponent, HeaderComponent, HeroComponent, PreviewComponent],
   imports: [CommonModule, AppRoutingModule],
-  exports: [ButtonComponent, SpacesComponent, MessagesComponent, HeaderComponent, HeroComponent, CaseComponent],
+  exports: [ButtonComponent, SpacesComponent, MessagesComponent, HeaderComponent, HeroComponent, PreviewComponent],
 })
 export class ComponentsModule {}

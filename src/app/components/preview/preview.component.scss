@@ -1,7 +1,7 @@
 @use 'abstracts/variables' as v;
 @use 'abstracts/mixins' as m;
 
-.case {
+.preview {
   @include m.center;
   &--even {
     background-color: v.$base08-light;

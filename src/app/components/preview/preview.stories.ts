@@ -1,18 +1,18 @@
-import { CaseComponent } from './case.component';
+import { PreviewComponent } from './preview.component';
 
 export default {
-  title: 'Case',
+  title: 'Preview',
 };
 
 export const Even = () => ({
-  component: CaseComponent,
+  component: PreviewComponent,
   props: {
     type: 'even',
   },
 });
 
 export const Odd = () => ({
-  component: CaseComponent,
+  component: PreviewComponent,
   props: {
     type: 'odd',
   },
