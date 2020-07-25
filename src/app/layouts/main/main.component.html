@@ -1,2 +1,6 @@
 <app-hero></app-hero>
-<app-preview *ngFor="let number of [0, 1, 2, 3]; even as isEven" type="{{ isEven ? 'even' : 'odd' }}"></app-preview>
+<app-preview
+  *ngFor="let number of [0, 1, 2, 3]; let i = index; even as isEven"
+  type="{{ isEven ? 'even' : 'odd' }}"
+  name="{{ i }}"
+></app-preview>

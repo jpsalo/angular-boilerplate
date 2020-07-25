@@ -6,9 +6,10 @@ import { ComponentsModule } from '~components/components.module';
 import { QuestionsComponent } from './questions/questions.component';
 import { QuestionComponent } from './question/question.component';
 import { RouterModule } from '@angular/router';
+import { CaseComponent } from './case/case.component';
 
 @NgModule({
-  declarations: [MainComponent, QuestionsComponent, QuestionComponent],
+  declarations: [MainComponent, QuestionsComponent, QuestionComponent, CaseComponent],
   imports: [CommonModule, ComponentsModule, FormsModule, RouterModule],
   exports: [MainComponent],
 })
