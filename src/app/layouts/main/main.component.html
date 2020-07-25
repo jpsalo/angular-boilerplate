@@ -1,6 +1,7 @@
 <app-hero></app-hero>
 <app-preview
-  *ngFor="let number of [0, 1, 2, 3]; let i = index; even as isEven"
+  *ngFor="let case of cases; even as isEven"
   type="{{ isEven ? 'even' : 'odd' }}"
-  name="{{ i }}"
+  name="{{ case.name }}"
+  path="{{ case.path }}"
 ></app-preview>

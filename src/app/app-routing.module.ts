@@ -7,7 +7,7 @@ import { CaseComponent } from '~layouts/case/case.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: MainComponent },
-  { path: ':name', component: CaseComponent },
+  { path: ':path', component: CaseComponent },
   { path: 'questions', component: QuestionsComponent },
   { path: 'detail/:id', component: QuestionComponent },
 ];

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CaseService } from '~services/case.service';
+import { Case } from '~interfaces/case';
 
 @Component({
   selector: 'app-case',
@@ -7,15 +9,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./case.component.scss'],
 })
 export class CaseComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
-  name: string;
+  case: Case;
+
+  constructor(private route: ActivatedRoute, private caseService: CaseService) {}
 
   ngOnInit(): void {
-    this.name = this.getCase();
+    this.getCase();
   }
 
-  getCase(): string {
-    const name = this.route.snapshot.paramMap.get('name');
-    return name;
+  getCase(): void {
+    const path = this.route.snapshot.paramMap.get('path');
+    this.caseService.getCase(path).subscribe((theCase) => (this.case = theCase)); // FIXME: name cannot be 'case' for some reason
   }
 }

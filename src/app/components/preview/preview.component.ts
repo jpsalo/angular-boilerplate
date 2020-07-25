@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PreviewComponent implements OnInit {
   @Input() type: string;
   @Input() name: string;
+  @Input() path: string;
 
   constructor() {}
 

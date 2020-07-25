@@ -7,12 +7,20 @@ import { Question } from '~interfaces/question';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    const cases = [
+      { id: 11, name: 'Make a Case', path: 'make-a-case' },
+      { id: 12, name: 'Case 2', path: 'second-case' },
+      { id: 13, name: 'This is a case, too', path: 'case-too' },
+      { id: 14, name: 'In case', path: 'in-case' },
+    ];
+
     const questions = [
       { id: 11, name: 'Age' },
       { id: 12, name: 'Occupation' },
       { id: 13, name: 'Supervisor' },
     ];
-    return { questions };
+
+    return { cases, questions };
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
