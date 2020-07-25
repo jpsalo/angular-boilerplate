@@ -1,5 +1,7 @@
 @use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
 
 .header {
+  @include m.gutter;
   height: v.$size-header;
 }

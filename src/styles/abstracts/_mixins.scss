@@ -54,3 +54,19 @@
   display: flex;
   justify-content: center;
 }
+
+@mixin gutter {
+  padding: v.$space-inset-xs;
+  @include for-tablet-portrait-up {
+    padding: v.$space-inset-s;
+  }
+  @include for-tablet-landscape-up {
+    padding: v.$space-inset-m;
+  }
+  @include for-desktop-up {
+    padding: v.$space-inset-l;
+  }
+  @include for-big-desktop-up {
+    padding: v.$space-inset-xl;
+  }
+}

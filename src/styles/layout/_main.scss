@@ -1,9 +1,12 @@
 @use 'abstracts/variables' as v;
+@use 'abstracts/mixins' as m;
 
 .hero {
+  @include m.gutter;
   height: 70vh;
 }
 
 .case {
+  @include m.gutter;
   height: 100vh;
 }
