@@ -18,7 +18,7 @@ export class CaseComponent implements OnInit {
   }
 
   getCase(): void {
-    const path = this.route.snapshot.paramMap.get('path');
-    this.caseService.getCase(path).subscribe((theCase) => (this.case = theCase)); // FIXME: name cannot be 'case' for some reason
+    const slug = this.route.snapshot.paramMap.get('path');
+    this.caseService.getCase(slug).subscribe((theCase) => (this.case = theCase)); // FIXME: 'theCase'
   }
 }

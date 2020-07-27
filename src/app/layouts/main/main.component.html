@@ -2,6 +2,6 @@
 <app-preview
   *ngFor="let case of cases; even as isEven"
   type="{{ isEven ? 'even' : 'odd' }}"
-  name="{{ case.name }}"
-  path="{{ case.path }}"
+  name="{{ case.title }}"
+  slug="{{ case.slug }}"
 ></app-preview>

@@ -1,3 +1,4 @@
-<article>
-  <p *ngIf="case">{{ case.name }}</p>
+<article *ngIf="case">
+  <h1>{{ case.title }}</h1>
+  <p>{{ case.description }}</p>
 </article>

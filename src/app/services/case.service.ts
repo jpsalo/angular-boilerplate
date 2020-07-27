@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Case } from '~interfaces/case';
-import { HttpClient } from '@angular/common/http';
+import { ContentfulService } from '~services/contentful.service';
+import { from, Observable, of } from 'rxjs';
 import { MessageService } from '~services/message.service';
-import { Observable, of } from 'rxjs';
-import { tap, catchError, map } from 'rxjs/operators';
+import { map, tap, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CaseService {
-  private casesUrl = 'api/cases'; // URL to web api
-
-  constructor(private http: HttpClient, private messageService: MessageService) {}
+  constructor(private contentfulService: ContentfulService, private messageService: MessageService) {}
 
   private log(message: string) {
     this.messageService.add(`CaseService: ${message}`);
@@ -37,20 +35,18 @@ export class CaseService {
   }
 
   getCases(): Observable<Case[]> {
-    return this.http.get<Case[]>(this.casesUrl).pipe(
+    return from(this.contentfulService.getCases()).pipe(
       tap((_) => this.log('fetched cases')),
+      map((cases) => cases.map((theCase) => theCase.fields)), // FIXME: 'theCase'
       catchError(this.handleError<Case[]>('getCases', []))
     );
   }
 
-  getCase(path: string): Observable<Case> {
-    return this.getCaseByPath(path).pipe(map((array) => array[0]));
-  }
-
-  getCaseByPath(path: string): Observable<Case[]> {
-    return this.http.get<Case[]>(`${this.casesUrl}/?path=${path}`).pipe(
-      tap((x) => (x.length ? this.log(`found cases matching "${path}"`) : this.log(`no cases matcing "${path}"`))),
-      catchError(this.handleError<Case[]>('getCase', []))
+  getCase(slug: string): Observable<Case> {
+    return from(this.contentfulService.getCase(slug)).pipe(
+      tap((x) => (x ? this.log(`found case matching "${slug}"`) : this.log(`no case matching "${slug}"`))),
+      map((theCase) => theCase.fields), // FIXME: 'theCase'
+      catchError(this.handleError<Case>('getCase', null))
     );
   }
 }

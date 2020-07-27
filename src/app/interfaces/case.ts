@@ -1,5 +1,6 @@
+// TODO: https://github.com/intercom/contentful-typescript-codegen
 export interface Case {
-  id: number;
-  name: string;
-  path: string;
+  slug: string;
+  title: string;
+  description: string;
 }
