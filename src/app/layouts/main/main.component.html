@@ -1,7 +1,7 @@
 <app-hero></app-hero>
 <app-preview
-  *ngFor="let case of cases; even as isEven"
-  type="{{ isEven ? 'even' : 'odd' }}"
+  *ngFor="let case of cases"
   name="{{ case.title }}"
+  description="{{ case.description }}"
   slug="{{ case.slug }}"
 ></app-preview>

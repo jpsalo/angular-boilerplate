@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./preview.component.scss'],
 })
 export class PreviewComponent implements OnInit {
-  @Input() type: string;
   @Input() name: string;
+  @Input() description: string;
   @Input() slug: string;
 
   constructor() {}

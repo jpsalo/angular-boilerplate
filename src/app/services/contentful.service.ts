@@ -36,7 +36,7 @@ export class ContentfulService {
 
   getCases(): Promise<Entry<any>[]> {
     return this.getEntries({
-      select: 'fields.title,fields.slug',
+      select: 'fields.slug,fields.title,fields.description',
     });
   }
 

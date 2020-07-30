@@ -1,12 +1,17 @@
 @use 'abstracts/variables' as v;
 @use 'abstracts/mixins' as m;
 
+// Override
+article > * + * {
+  margin-top: 0;
+}
+
 .hero {
   @include m.gutter;
   height: 70vh;
 }
 
 .preview {
-  @include m.gutter;
-  height: 100vh;
+  height: (100vh / v.$golden-ratio);
+  margin: v.$space-stack-default;
 }

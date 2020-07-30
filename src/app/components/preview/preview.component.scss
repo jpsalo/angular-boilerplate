@@ -1,9 +1,49 @@
 @use 'abstracts/variables' as v;
 @use 'abstracts/mixins' as m;
 
+$font-white: #fff;
+$height-divider: 20%;
+
 .preview {
-  @include m.center;
-  &--even {
-    background-color: v.$base08-light;
+  display: flex;
+  flex-direction: column;
+  &--heading {
+    background-color: v.$base0f-light;
+    display: flex;
+    flex-direction: column;
+    height: (100%- (100% / v.$golden-ratio));
+  }
+  &--heading::before {
+    content: '';
+    height: $height-divider;
+  }
+  &--title {
+    align-items: center;
+    color: $font-white;
+    display: flex;
+    flex: 1;
+    font-weight: 300;
+    padding: v.$space-inset-default;
+  }
+  &--divider {
+    height: $height-divider;
+    width: 100%;
+  }
+  &--divider__upper {
+    fill: v.$base0f-light;
+  }
+  &--divider__lower {
+    fill: v.$base0c-light;
+  }
+  &--description {
+    background-color: v.$base0c-light;
+    color: $font-white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-weight: 300;
+    justify-content: center;
+    padding: v.$space-inset-default;
+    text-align: right;
   }
 }

@@ -3,4 +3,5 @@ export interface Case {
   slug: string;
   title: string;
   description: string;
+  lead: string;
 }

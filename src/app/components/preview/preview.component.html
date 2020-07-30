@@ -1,4 +1,22 @@
-<article class="preview" [ngClass]="{ 'preview--even': type === 'even', 'preview--odd': type === 'odd' }">
-  <p>{{ name }}</p>
-  <a routerLink="/{{ slug }}">link</a>
+<article class="preview">
+  <header class="preview--heading">
+    <h1 class="preview--title">
+      {{ name }}
+    </h1>
+
+    <svg class="preview--divider" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polygon class="preview--divider__lower" points="0,90 100,0 100,5 0,95" />
+
+      <polygon class="preview--divider__upper" points="0,95 100,5 100,10 0,100" />
+
+      <polygon class="preview--divider__lower" points="0,100 100,10 100,100" />
+
+      <polygon class="preview--divider__upper" points="0,0 100,0 100,0 0,90" />
+    </svg>
+  </header>
+
+  <section class="preview--description">
+    <p>{{ description }}</p>
+    <a routerLink="/{{ slug }}">link</a>
+  </section>
 </article>
