@@ -11,7 +11,35 @@ article > * + * {
   height: 70vh;
 }
 
+$column-gutter: v.$space-s;
+
+@mixin track-list-for($window-min-width, $columns) {
+  $gutter-space: ($columns - 1) * $column-gutter;
+  $column-min-width: ($window-min-width - $gutter-space) / $columns;
+  // https://caniuse.com/#search=grid-template-columns
+  // https://caniuse.com/#feat=mdn-css_properties_grid-template-rows_minmax
+  // https://github.com/ismay/stylelint-no-unsupported-browser-features
+  grid-template-columns: repeat(auto-fit, minmax($column-min-width, 1fr));
+}
+
+@mixin track-list() {
+  @include m.for-tablet-portrait-up {
+    @include track-list-for(v.$phone-upper-boundary, 2);
+  }
+  @include m.for-tablet-landscape-up {
+    @include track-list-for(v.$tablet-portrait-upper-boundary, 3);
+  }
+  @include m.for-desktop-up {
+    @include track-list-for(v.$tablet-landscape-upper-boundary, 4);
+  }
+}
+
+.preview-list {
+  @include track-list;
+  display: grid;
+  gap: v.$space-default $column-gutter;
+}
+
 .preview {
   height: (100vh / v.$golden-ratio);
-  margin: v.$space-stack-default;
 }
