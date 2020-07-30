@@ -1,11 +1,6 @@
 @use 'abstracts/variables' as v;
 @use 'abstracts/mixins' as m;
 
-// Override
-article > * + * {
-  margin-top: 0;
-}
-
 .hero {
   @include m.gutter;
   height: 70vh;

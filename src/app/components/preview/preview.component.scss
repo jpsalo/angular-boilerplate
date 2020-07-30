@@ -1,6 +1,11 @@
 @use 'abstracts/variables' as v;
 @use 'abstracts/mixins' as m;
 
+// Override
+article > * + * {
+  margin-top: 0;
+}
+
 $font-white: #fff;
 $height-divider: 20%;
 
