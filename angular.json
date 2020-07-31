@@ -100,7 +100,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              // https://github.com/jfcere/ngx-markdown#ngx-markdown-1
+              "./node_modules/marked/lib/marked.js"
+            ]
           }
         },
         "lint": {

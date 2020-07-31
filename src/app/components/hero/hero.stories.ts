@@ -4,6 +4,9 @@ export default {
   title: 'Hero',
 };
 
-export const Text = () => ({
+export const Default = () => ({
   component: HeroComponent,
+  props: {
+    hero: {description: '#qwerty'}
+  }
 });

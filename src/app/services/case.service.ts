@@ -15,6 +15,7 @@ export class CaseService {
     this.messageService.add(`CaseService: ${message}`);
   }
 
+  // TODO: inheritance
   /**
    * Handle Http operation that failed.
    * Let the app continue.

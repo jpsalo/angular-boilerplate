@@ -1,3 +1,5 @@
-<article class="hero">
-  <p>hello</p>
+<article *ngIf="hero" class="hero">
+  <article markdown [data]="hero.description" class="hero--description"></article>
+
+  <img [src]="hero.avatar.fields.file.url" [alt]="hero.avatar.fields.title" />
 </article>
